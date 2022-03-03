@@ -1,4 +1,5 @@
-STEPS:
+# STEPS:
+
 1. login to Ubuntu machine via ssh
 2. Execute command:
 ```
