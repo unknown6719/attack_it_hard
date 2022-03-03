@@ -20,9 +20,13 @@ python --version
 sudo apt install git -y
 git --version
 
-git clone https://github.com/unknown6719/attack_it_hard.git
-
+if [ ! -d "attack_it_hard" ] 
+then
+  git clone https://github.com/unknown6719/attack_it_hard.git
+fi
 cd attack_it_hard
+
+pip install -r requirements.txt
 
 bash run.sh
 EOF
