@@ -1,3 +1,39 @@
+STEPS:
+1. login to Ubuntu machine via ssh
+2. Execute command:
+```
+cat > install.sh <<EOF
+#! /bin/bash
+
+cd /home/ubuntu
+sudo apt update
+sudo apt -y upgrade
+
+
+sudo apt install software-properties-common
+sudo add-apt-repository -y ppa:deadsnakes/ppa
+sudo apt update
+sudo apt install python3.9
+python --version
+
+sudo apt install git -y
+git --version
+
+git clone https://github.com/unknown6719/attack_it_hard.git
+
+cd attack_it_hard
+
+bash run.sh
+EOF
+```
+
+3. Run command:
+```
+bash install.sh
+```
+
+----
+
 # :bomb: Impulse
 ## Modern Denial-of-service ToolKit
 
